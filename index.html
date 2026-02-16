@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>Special Topics: 3D Design & Physical Computing Winter 2026</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+<style>
+body,h1,h2,h3,h4,h5 {
+  font-family: "Poppins", sans-serif
+  }
+body {
+  font-size:16px;
+  }
+h1 { 
+  font-size:30px;
+  }
+h2 {
+  font-size:25px;
+  }
+  h3 {
+  font-size:18px;
+  }
+img {
+  width: 100%;
+  height: 100%;
+}
+.grid {
+  display: inline-grid;
+  grid-template-columns: auto auto auto;
+}
+.w3-half img{
+  margin-bottom:-6px;
+  margin-top:16px;
+  opacity:0.8;
+  cursor:pointer
+  } */
+.w3-half img:hover{
+  opacity:1
+  }
+
+.container {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    padding-top: 56.25%;
+    /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
+}
+.responsive-iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+}
+</style>
+<body>
+
+<!-- Sidebar/menu -->
+<nav class="w3-sidebar w3-light-grey w3-collapse w3-top w3-large w3-padding" style="z-index:3;width:200px;font-weight:bold;" id="mySidebar"><br>
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-button w3-display-topleft" style="display:none;font-size:22px"></a>
+  <div class="w3-container">
+    <h3 class="w3-padding-64"><b>IXD<br>DESN 34665<br> Winter 2026</b></h3>
+  </div>
+  <div class="w3-bar-block">
+    <a href="#Home" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Home</a> 
+    <a href="#Module1" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Module 1</a> 
+    <a href="#Activity1" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Activity 1</a> 
+    <a href="#Activity2" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Activity 2</a> 
+    <a href="#Workshop1" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Workshop 1</a> 
+    <a href="#Workshop2" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Workshop 2</a> 
+    <a href="#ProjectConcept" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Project 1</a> 
+  </div>
+</nav>
+
+<!-- Top menu on small screens
+<header class="w3-container w3-top w3-xlarge w3-padding">
+  <a href="javascript:void(0)" class="w3-button w3-red w3-margin-right" onclick="w3_open()">☰</a>
+  <span>Menu</span>
+</header> -->
+
+<!-- 
+  if you want to link your image to a video use one of the following alt links as an example:
+
+  alt="test1Lorem ipsum dolor sit amet, consectetur adipiscing elit test1Lorem ipsum dolor sit amet, consectetur adipiscing elit <a href='https://www.youtube.com/embed/tgbNymZ7vqY' target='_blank'><p>Project Video Link</p></a>"> 
+  alt="test2Lorem ipsum dolor sit amet, consectetur adipiscing elit <div class='container'><iframe class='responsive-iframe' src='https://www.youtube.com/embed/tgbNymZ7vqY'></iframe></div>">
+
+-->
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-main" style="margin-left:220px;margin-right:20px">
+
+  <!-- Header -->
+  <div class="w3-container" style="margin-top:80px" id="default">
+    <h1 class="w3-jumbo" id="Home"><b>Special Topics Module 1</b></h1>
+    <h1 class="w3-xxxlarge w3-text-blue"><b>Research & Activity Documentation</b></h1>
+      <h1 class="w3-xxxlarge w3-text-blue"><b>Valerii Babachenko</b></h1>
+  </div>
+  <!-- Boilerplate -->
+  <div id="Module1" class="w3-container" style="margin-top:20px">
+    <h1 class="w3-xxxlarge w3-text-red"><b>Project 1</b></h1>
+    <hr style="width:50px;border:5px solid red" class="w3-round">
+    <h2>Module 1</h2>
+    <h3>Ideating
+    </h3>
+    <hr style="width:50px;border:5px solid red" class="w3-round">
+  </div>
+  
+  <!-- Project 1 Photo grid (modal) -->
+  <div id="Activity1" >
+    <h2>Activity 1</h2>
+    <p>Gettting Informed and Ideating
+    </p>
+    <div class="grid">
+      <img src="images/Activity1/AR.jpeg" style="width:100%" onclick="onClick(this)" alt="This approach offers several strengths, including a strong focus on spatial interaction and user movement, allowing users to engage physically with digital content. It effectively blends digital elements with the real world, creating experiences that feel integrated rather than isolated on a screen. Its high industry relevance and future growth potential make it particularly valuable in emerging fields, while also encouraging context-aware interaction design that adapts to the surrounding environment. However, it also presents challenges. It requires specific device support and thorough testing in real-world environments, where environmental conditions can directly affect experience quality. Compared to web-based 3D experiences, it involves a more technical setup and can be harder to document and present consistently across different contexts."> 
+      <img src="images/Activity1/VR.jpeg" style="width:100%" onclick="onClick(this)" alt="This approach offers deep immersion and a strong sense of presence, allowing users to feel fully embedded within the experience. It enables embodied interaction and spatial navigation, making movement and physical positioning central to engagement. It is particularly powerful for simulations and experiential storytelling, where realism and emotional impact are essential. However, it also comes with limitations. It requires specialized hardware such as headsets and controllers, which can restrict accessibility and testing opportunities. The technical and production complexity is significantly higher compared to traditional digital formats, and it is less practical for portfolio viewing and easy sharing across standard platforms.">
+      <img src="images/Activity1/3D interaction experience.jpeg" style="width:100%" onclick="onClick(this)" alt="This approach emphasizes spatial interaction and user movement, allowing digital elements to blend seamlessly with the real world. It holds strong industry relevance and significant potential for future growth, particularly as immersive technologies continue to evolve. By encouraging context-aware interaction design, it pushes designers to consider environment, positioning, and real-time responsiveness as part of the user experience. However, it also presents challenges. It requires compatible devices and extensive testing in real-world environments, where external conditions can directly impact experience quality. Compared to web-based 3D experiences, it demands a more technical setup and can be more difficult to document and present consistently across different settings.">
+    </div>
+  </div>
+  
+  <hr style="width:90%;border:5px solid grey;margin-top:80px" class="w3-round"></hr>
+
+  <div id="Activity2" class="w3-row-padding">
+    <h2>Activity 2</h2>
+    <p>Gettting Informed and Ideating
+    </p>
+    <div class="grid">
+      <img src="images/Activity2/Game.jpeg" style="width:100%" onclick="onClick(this)" alt="The key interaction characteristics of this experience include the absence of visible buttons or navigation bars, relying instead on clear visual affordances that subtly signal how users can interact. Feedback is delivered through motion, sound, or color changes, reinforcing user actions without disrupting immersion. Interaction is not explicitly instructed but learned naturally through exploration. This approach keeps the focus on the experience rather than the controls, reduces cognitive overload by eliminating unnecessary interface elements, and creates a more immersive and intuitive environment for the user.">
+      <img src="images/Activity2/Interaction website.jpeg" style="width:100%" onclick="onClick(this)" alt="The key interaction characteristics of this experience rely on object-based navigation instead of traditional menus, using camera movement rather than page scrolling to guide users through the environment. Hover, click, and drag function as discovery tools, allowing users to actively explore the space, while content is revealed through interaction instead of static text blocks. This approach encourages exploration rather than passive consumption, allowing storytelling to unfold through movement and spatial relationships. By doing so, it seamlessly blends UX, interaction design, and motion design into a cohesive and immersive experience.">
+      <img src="images/Activity2/Storytelling.jpeg" style="width:100%" onclick="onClick(this)" alt="The key interaction characteristics of this experience center on motion as a primary communication tool, where movement conveys emotion and establishes pacing. Transitions are used to signal narrative shifts, guiding users seamlessly from one moment to the next, while animation replaces lengthy text explanations by visually expressing ideas and context. Cause-and-effect relationships are demonstrated through movement, allowing users to understand interactions intuitively. This approach transforms motion into both feedback and storytelling, creates strong emotional engagement, and reduces reliance on text by communicating meaning through dynamic visual experience.">
+    </div>
+  </div>
+
+  <hr style="width:90%;border:5px solid grey;margin-top:80px" class="w3-round"></hr>
+
+  <div id="Workshop1" class="w3-row-padding">
+    <h2>Workshop 1</h2>
+    <p>Executive function
+    </p>
+    <div class="grid">
+      <img src="images/Workshop1/Executive fUNCTION.jpeg" style="width:100%" onclick="onClick(this)" alt="Executive function is a set of mental skills adults use every day to plan, organize, focus attention, manage time, control emotions, and shift between tasks, and when these skills are weak it can make routine activities and goals feel overwhelming. It outlines common signs of executive function challenges—such as trouble managing schedules, staying organized, or following through on tasks—and emphasizes that these skills continue developing into adulthood and can be strengthened with tools like calendars, to-do lists, routines, and external supports. Understanding this helps you recognize areas where you might struggle and gives you practical ideas for improving your planning, focus, and self-management in daily life and work.">
+      <img src="images/Workshop1/Nutrition Exc Function.jpeg" style="width:100%" onclick="onClick(this)" alt="The article explains that what you eat directly affects how well your brain can plan, focus, regulate emotions, and control impulses — all key executive function skills — because a balanced, nutrient-rich diet provides steady fuel and important nutrients like omega-3s, B vitamins, and antioxidants that support brain health and stable energy levels. It highlights that eating whole foods such as fruits, vegetables, whole grains, lean proteins, and healthy fats can improve mental clarity, reduce fatigue, and support better attention and self-regulation, while diets high in sugars and processed foods can worsen mood and cognitive performance. Understanding this helps you make better food choices that support your focus and problem-solving abilities in daily life and in your executive function workshop work.">
+      <img src="images/Workshop1/Burnout.jpeg" style="width:100%" onclick="onClick(this)" alt="Student burnout is a state of chronic stress caused by prolonged academic pressure, perfectionism, lack of balance, and poor recovery habits, leading to exhaustion, reduced motivation, and decreased performance. It highlights common signs like feeling overwhelmed, procrastinating more, and losing interest in work, and recommends practical strategies such as prioritizing sleep, setting realistic goals, managing time intentionally, and building routines that include breaks and self-care. Understanding these insights can help you recognize burnout early, adjust how you approach your tasks, and develop healthier habits that support sustained focus and well-being in school and beyond.">
+    </div>
+    <h2>Action Research</h2>
+    <p>The action research evaluated tools, platforms, and workflows to determine the most feasible and professionally relevant approach for building a motion-driven 3D experience, including software comparison, web integration testing, and subscription considerations.
+    </p>
+    <ul>
+  <li>Defined the action research focus as evaluating tools, platforms, and workflows for a motion-driven, scroll-based interactive 3D storytelling website concept.</li>
+  <li>Compared key 3D production tools (Spline, Blender, Cinema 4D, Unity) to understand strengths, limitations, learning curve, and best fit for web-based interactive storytelling.</li>
+  <li>Researched practical web integration by testing how Spline can be embedded into Framer (Embed component and &lt;spline-viewer&gt;), supporting scroll and interaction events.</li>
+  <li>Investigated platform constraints affecting deployment, including Framer Student Plans one-site publishing limit and a workaround using a separate student account for publishing.</li>
+  <li>Reviewed Spline subscription tiers and AI 3D generation capabilities (text-to-3D and image-to-3D) to assess whether upgrading could improve asset creation and final quality.</li>
+</ul>
+
+  </div>
+
+  <hr style="width:90%;border:5px solid grey;margin-top:80px" class="w3-round"></hr>
+
+  <!-- Boilerplate -->
+  <div id="Project1" class="w3-container" style="margin-top:75px">
+    <h1 class="w3-xxxlarge w3-text-red"><b>Project 1</b></h1>
+    <hr style="width:50px;border:5px solid red" class="w3-round">
+    <h2>Project Concept</h2>
+    <p>Motion-driven 3D interactive storytelling website
+    </p>
+    <img src="images/final/Project Concept.png" style="width:100%" onclick="onClick(this)" alt="This project is a motion-driven 3D interactive website inspired by the myth of Pandora’s Box. The experience reimagines the story through scroll-based navigation, spatial depth, and controlled camera movement.
+
+As users progress, key moments of the narrative — the box, its opening, the release of chaos, and the presence of hope — unfold through 3D environments, character presence, and atmospheric motion rather than heavy text.
+
+The project explores how classical storytelling can be translated into a modern digital format using motion, interaction, and spatial design as primary narrative tools.">
+  </div>
+
+  <hr style="width:90%;border:5px solid grey;margin-top:80px" class="w3-round"></hr>
+
+  <div id="Reflection" class="w3-row-padding">
+    <h2>Research Reflection</h2>
+    <p>
+After completing my research phase and receiving peer feedback, I took time to critically reflect on my initial concept. Although the motion-driven storytelling direction was conceptually strong and well-researched, I realized that I was not genuinely excited about continuing in that direction. I experimented with a few early visual and structural ideas, but the process did not feel motivating or creatively engaging for me.
+</p>
+
+<p>
+I understood that while a concept may be academically valid and strategically sound, it also needs to align with personal interest and long-term portfolio goals. I began reassessing what type of work I am most passionate about and what direction would better represent the kind of designer I want to become.
+</p>
+
+<p>
+As a result, I have decided to shift my project toward creating a 3D UI or product animation using Blender or After Effects. I am particularly drawn to the intersection of interface design, motion, and spatial depth.
+</p>
+
+<p>
+During my research, I found several examples of product launch animations and 3D UI explorations that clearly demonstrate the level of polish and intentional motion I would like to achieve. These references helped clarify both the aesthetic direction and technical standard I want to pursue. In the following slides, I will present visual examples that represent the quality, tone, and complexity I aim to accomplish.
+</p>
+
+<p>
+This shift in direction reflects not a lack of commitment, but rather a more refined understanding of my interests and strengths.
+</p>
+
+  </div>
+
+  <hr style="width:90%;border:5px solid grey;margin-top:80px" class="w3-round"></hr>
+
+  <div id="NextSteps" class="w3-row-padding">
+    <h2>Next Steps</h2>
+   <ol>
+  <li>
+    <strong>Refine the Product Concept</strong>
+    <p>
+      Clearly define the type of product, the target user, and the core features that will be highlighted in the animation.
+    </p>
+  </li>
+
+  <li>
+    <strong>Create Low-Fidelity Storyboards</strong>
+    <p>
+      Sketch the structure of the promo video, mapping out scene transitions, camera movement, feature highlights, and motion hierarchy before building in 3D.
+    </p>
+  </li>
+
+  <li>
+    <strong>Develop a Functional Motion Prototype</strong>
+    <p>
+      Build a simplified version of key UI animations using Blender or After Effects, focusing on:
+    </p>
+    <ul>
+      <li>Camera depth</li>
+      <li>UI layering</li>
+      <li>Microinteractions</li>
+      <li>Transition pacing</li>
+    </ul>
+  </li>
+
+  <li>
+    <strong>Conduct Usability &amp; Perception Testing</strong>
+    <p>Share the prototype with peers to test:</p>
+    <ul>
+      <li>Clarity of feature communication</li>
+      <li>Readability of UI elements</li>
+      <li>Visual hierarchy</li>
+      <li>Overall professional feel</li>
+    </ul>
+  </li>
+
+  <li>
+    <strong>Evaluate Motion Effectiveness</strong>
+    <p>
+      Assess whether motion enhances understanding or distracts from the interface. Identify moments where pacing or clarity needs refinement.
+    </p>
+  </li>
+
+  <li>
+    <strong>Iterate Based on Feedback</strong>
+    <p>
+      Refine animations, simplify overly complex sequences, and improve visual balance before moving into full production.
+    </p>
+  </li>
+
+  <li>
+    <strong>Document Testing Outcomes</strong>
+    <p>
+      Record insights, challenges, and improvements to demonstrate evidence-based design decisions.
+    </p>
+  </li>
+</ol>
+
+    </div>
+
+  <hr style="width:90%;border:5px solid grey;margin-top:80px" class="w3-round"></hr>
+  
+   <!-- Modal for full size images on click-->
+   <div id="modal01" class="w3-modal w3-grey" style="padding-top:0" onclick="this.style.display='none'">
+    <span class="w3-button w3-black w3-xxlarge w3-display-topright">×</span>
+    <div class="w3-modal-content w3-center w3-transparent" style ="padding:20px">
+      <img id="img01" class="w3-image">
+      <h2 id="caption"></h2>
+
+      <!-- <div id="urLink"></div> -->
+      <!-- <a id="urLink" class="container"><iframe class="responsive-iframe"></iframe></a> -->
+    <!-- </div> -->
+  </div>
+<!-- End page content -->
+</div>
+
+<!-- W3.CSS Container -->
+<div class="w3-light-grey w3-container w3-padding-32" style="margin-top:75px;padding-right:58px"><p class="w3-right">Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-opacity">w3.css</a></p></div>
+
+<script>
+
+// Modal Image Gallery
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+
+  document.getElementById("modal01").style.display = "block";
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
+
+  // var captionUrl = document.getElementById("urLink");
+  // captionUrl.innerHTML = element.url;
+
+  //document.getElementById("urLink").src = element.url;
+}
+</script>
+
+</body>
+</html>
